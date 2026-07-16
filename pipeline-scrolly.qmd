@@ -32,36 +32,56 @@ Current administration and leadership priorities closely align with the workflow
 
 ::: {.cr-section layout="overlay-center"}
 
-:::{focus-on="cr-efficiency"}
-*Efficiency:*
-Improved and streamlined processes leads to increased throughput and better reproducibility.
-:::
+*Efficiency:*<br><br>Improved and streamlined processes leads to increased throughput and better reproducibility.[@cr-efficiency]
 
 :::{#cr-efficiency}
 ![](assets/efficiency.jpg)
 :::
 
+**Cloud Migration**<br><br>Transition of data to the cloud opens a new realm of possibilities and automation due to lower barriers to access.[@cr-cloud-migration]
+
+:::{#cr-cloud-migration}
+![](assets/clouds-3_5.jpg)
 :::
+
+**Centralized Efforts**<br><br>A variety of collaborative projects involving scientists from all regions building tools that will be broadly used.[@cr-efforts]
+
+:::{#cr-efforts}
+![](assets/centralized_efforts.jpg)
+:::
+
+**Standardization**<br><br>Same process, same standards, same approach means more efficient process and more support across the agency.[@cr-std]
+
+:::{#cr-std}
+![](assets/stdization.jpg)
+:::
+
+:::
+
+:::{.cr-section layout="overlay-center"}
+
+## Foundational Projects:
+
+:::
+
 
 ::: {.cr-section layout="sidebar-right"}
 
 ::: {.progress-block}
 
-Cloud Migration @cr-sequence-clouds
+@cr-sequence-clouds
 
-*Develop and implement an enterprise modernization plan for fishery-dependent data systems.* @cr-sequence-clouds
-
-Both data and virtual machines provides links to more accessible data via APIs. @cr-sequence-clouds
-
-Goals: @cr-sequence-clouds
-
-* Develop and Deploy Fully Enabled Cloud Solutions @cr-sequence-clouds
-
-* Promote a Data-Driven Culture Through the Adoption of Open Science Initiatives @cr-sequence-clouds
-
-* Formalize the Operating Model for Modernization @cr-sequence-clouds
-
-* Align Data Management and System Standards @cr-sequence-clouds
+**1. Cloud Migration**
+<br><br>*Develop and implement an enterprise modernization plan for fishery-dependent data systems.*<br><br>Both data and virtual machines provides links to more accessible data via APIs.<br>
+<br>**Goals:**
+<br>
+* Develop and Deploy Fully Enabled Cloud Solutions
+<br>
+* Promote a Data-Driven Culture Through the Adoption of Open Science Initiatives
+<br>
+* Formalize the Operating Model for Modernization
+<br>
+* Align Data Management and System Standards
 
 :::
 
@@ -89,7 +109,125 @@ images = [
 
 // If this section's first trigger is the 3rd trigger in the document, subtract 2
 // We use Math.max to make sure we don't end up with a negative index
-relativeIndex = crTriggerIndex !== null ? Math.max(0, crTriggerIndex - 2) : 0
+relativeIndex = crTriggerIndex !== null ? Math.max(0, crTriggerIndex - 5) : 0
+
+// Cap it so it doesn't try to load an image beyond index 15
+currentIndex = Math.min(relativeIndex, images.length - 1)
+
+html`<img src="${images[currentIndex]}" style="width: 100%; height: auto; max-height: 80vh; object-fit: contain;" />`
+
+angleScale1 = d3.scaleLinear()
+  .domain([0, 1])
+  .range([-180, 0])
+  .clamp(true)
+    
+angle1 = angleScale1(crProgressBlock)
+```
+:::
+
+:::
+
+::: {.cr-section layout="sidebar-left"}
+
+**2. Data Modernization**<br><br>Transforming field observations into standardized, "downstream-ready" assets.[@cr-mod-1]
+
+Aim to increase uniformity of data across science centers which will enable a more efficient and streamlined stock assessments.[@cr-mod-2]
+
+<br>
+Data should be usable without bespoke cleaning and can be immediately used for assessment products such as calculating indices of abundance or growth modelling to lead into assessment input files.<br><br>{surveyjoin}<br><br>{FISHGLOB}[@cr-mod-3]
+
+<br>
+Automated and human-led quality control measure[@cr-mod-4]
+
+:::{#cr-mod-1}
+![](assets/data mod/1a.png)
+:::
+
+:::{#cr-mod-2}
+![](assets/data mod/2a.png)
+:::
+
+:::{#cr-mod-3}
+![](assets/data mod/3a.png)
+:::
+
+:::{#cr-mod-4}
+![](assets/data mod/4a.png)
+:::
+
+:::
+
+:::{.cr-section layout="sidebar-right"}
+
+::: {.progress-block}
+
+[@cr-sequence-fims]
+
+**3. Fisheries Integrated Modelling Systems**<br><br>FIMS aims to accomplish its mission with a user-friendly stock assessment tool that streamlines the development and application of scientific advice to inform current and future management needs of NOAA Fisheries’ regions. This can be acheived through:
+<br>
+1. **Meeting the needs** of operational stock assessments across regions, scenarios, and data types. 
+<br>
+2. Implementing practical and **robust methods.**
+<br>
+3. **Estimating and projecting** population trajectories, parameters, and uncertainty.
+<br>
+4. Spanning **different levels of expertise.**
+<br>
+5. Incorporating **user, developer, and community** contributions and feedback.
+<br>
+6. Develop a **flexible architecture** to adapt to future management needs and technical advancements.
+<br>
+<br>
+Also operational through R code
+<br>
+```
+library(FIMS) 
+# Load sample data 
+data("data_big") 
+# Prepare data for FIMS model 
+data_4_model <- FIMSFrame(data_big) 
+# Create parameters 
+parameters <- data_4_model |> 
+  create_default_configurations() |> 
+  create_default_parameters(data = data_4_model) 
+# Run the model with optimization 
+fit <- parameters |> 
+  initialize_fims(data = data_4_model) |> 
+  fit_fims(optimize = TRUE) 
+# Clear memory post-run 
+clear()
+```
+
+:::
+
+:::{#cr-sequence-fims}
+```{ojs}
+//| echo: false
+images = [
+  "assets/fims_animation/1.png",
+  "assets/fims_animation/2.png",
+  "assets/fims_animation/3.png",
+  "assets/fims_animation/4.png",
+  "assets/fims_animation/5.png",
+  "assets/fims_animation/6.png",
+  "assets/fims_animation/7.png",
+  "assets/fims_animation/8.png",
+  "assets/fims_animation/9.png",
+  "assets/fims_animation/10.png",
+  "assets/fims_animation/11.png",
+  "assets/fims_animation/12.png",
+  "assets/fims_animation/13.png",
+  "assets/fims_animation/14.png",
+  "assets/fims_animation/15.png",
+  "assets/fims_animation/16.png",
+  "assets/fims_animation/17.png",
+  "assets/fims_animation/18.png",
+  "assets/fims_animation/19.png"
+]
+
+// If this section's first trigger is the 3rd trigger in the document, subtract 2
+// We use Math.max to make sure we don't end up with a negative index
+relativeIndex = crTriggerIndex !== null ? Math.max(0, crTriggerIndex - 24) : 0
 
 // Cap it so it doesn't try to load an image beyond index 15
 currentIndex = Math.min(relativeIndex, images.length - 1)
