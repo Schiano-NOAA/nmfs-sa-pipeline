@@ -6,6 +6,7 @@ format:
       narrative-text-color-overlay: "#e2e2e2"
       section-background-color: black
       narrative-text-color-sidebar: "#e2e2e2"
+output-file: index
 ---
 :::{.cr-section layout="overlay-center"}
 
