@@ -21,6 +21,8 @@ Cloud-based, automated stock assessments.
 
 :::
 
+<!--- end title block --->
+
 ::: {.cr-section layout="overlay-center"}
 
 ::: {focus-on}
@@ -29,6 +31,8 @@ Current administration and leadership priorities closely align with the workflow
 :::
 
 :::
+
+<!--- end why q block --->
 
 ::: {.cr-section layout="overlay-center"}
 
@@ -57,6 +61,8 @@ Current administration and leadership priorities closely align with the workflow
 :::
 
 :::
+
+<!--- end reasons block --->
 
 :::{.cr-section layout="overlay-center"}
 
@@ -178,9 +184,7 @@ Automated and human-led quality control measure[@cr-mod-4]
 6. Develop a **flexible architecture** to adapt to future management needs and technical advancements.
 <br>
 <br>
-Also operational through R code
-<br>
-```
+Also operational through R code<br><br>```
 library(FIMS) 
 # Load sample data 
 data("data_big") 
@@ -195,8 +199,7 @@ fit <- parameters |>
   initialize_fims(data = data_4_model) |> 
   fit_fims(optimize = TRUE) 
 # Clear memory post-run 
-clear()
-```
+clear()```
 
 :::
 
@@ -241,6 +244,180 @@ angleScale1 = d3.scaleLinear()
     
 angle1 = angleScale1(crProgressBlock)
 ```
+:::
+
+:::
+
+::: {.cr-section layout="sidebar-left"}
+
+::: {.progress-block}
+
+[@cr-sequence-workflows]
+
+**4. The Workflows Project**<br><br>A focus on standardization and semi-automation of stock assessment reports.
+<br>
+Built upon a need to identify bottlenecks:
+<br>
+* Data processing
+<br>
+* Reporting requirements
+<br>
+* Section 508 compliance
+<br>
+Currently, the team built 2 R packages that addresses partial automation of reports including full-automation to make reports 508 compliant.
+<br>
+<br>
+**{asar}**
+<br>
+Build the foundation to standardization reporting along with a set of NOAA Fisheries Stock Assessment report guidelines through R code and a reproducible approach using Quarto.<br><br>```
+library(asar)
+# create report template
+asar::create_template(
+  species = "Petrale sole",
+    authors = c("Jane Doe"="OST"),
+    region = "West Coast",
+    office = "NWFSC")
+# render report
+quarto::quarto_render("sar_WC_Petrale_sole_skeleton.qmd")
+```
+<br><br>
+**{stockplotr}**<br>```
+library(stockplotr)
+# standardize model output
+petrale <- convert_output(file = "Report.sso")
+# Create a table
+table_index(petrale)
+# Create_figure
+plot_spawning_biomass(petrale)
+```
+:::
+
+:::{#cr-sequence-workflows}
+```{ojs}
+//| echo: false
+images = [
+  "assets/fims_animation/1.png",
+  "assets/fims_animation/2.png",
+  "assets/fims_animation/3.png",
+  "assets/fims_animation/4.png",
+  "assets/fims_animation/5.png",
+  "assets/fims_animation/6.png",
+  "assets/fims_animation/7.png",
+  "assets/fims_animation/8.png",
+  "assets/fims_animation/9.png",
+  "assets/fims_animation/10.png",
+  "assets/fims_animation/11.png",
+  "assets/fims_animation/12.png",
+  "assets/fims_animation/13.png",
+  "assets/fims_animation/14.png",
+  "assets/fims_animation/15.png",
+  "assets/fims_animation/16.png",
+  "assets/fims_animation/17.png",
+  "assets/fims_animation/18.png",
+  "assets/fims_animation/19.png"
+]
+
+// If this section's first trigger is the 3rd trigger in the document, subtract 2
+// We use Math.max to make sure we don't end up with a negative index
+relativeIndex = crTriggerIndex !== null ? Math.max(0, crTriggerIndex - 24) : 0
+
+// Cap it so it doesn't try to load an image beyond index 15
+currentIndex = Math.min(relativeIndex, images.length - 1)
+
+html`<img src="${images[currentIndex]}" style="width: 100%; height: auto; max-height: 80vh; object-fit: contain;" />`
+
+angleScale1 = d3.scaleLinear()
+  .domain([0, 1])
+  .range([-180, 0])
+  .clamp(true)
+    
+angle1 = angleScale1(crProgressBlock)
+```
+:::
+
+:::
+
+<!--- end projects block --->
+
+:::{.cr-section layout="overlay-center"}
+
+The Stock Assessment Pipeline [@cr-underwater]
+
+:::{#cr-underwater}
+![](assets/underwater.png)
+:::
+
+:::
+
+<!--- end pipeline title transition block --->
+
+:::{.cr-section layout="sidebar-right"}
+
+Let's Dive In<br>[@cr-diver]
+Each piece of the pipeline connects to form partially and fully automated components. Each of these "modules" could be incorporated into the workflow of an assessment scientist at NOAA.[@cr-diver]
+
+Intention[@cr-diver]
+
+1. Provide assessment scientists with the supplies to build the foundation for an automated workflow.[@cr-diver]
+
+2. Build and understand the principles of a workflow in the cloud.[@cr-diver]
+
+3. Provide modules that can be extracted from the pipeline.[@cr-diver]
+
+4. Find solutions to make cloud data and data processing more attainable.[@cr-diver]
+
+**Long term goal: an established pipeline that can provide annual updates for a given stock triggered by new data.**<br>NOTE: This is in early stage development and processes are not completely developed. We are currently working to make connections among projects and current efforts along with identifying points of contact for each portion of the pipeline. We plan to make use of existing and new efforts to develop a working example to demonstrate the potential for an established automated stock assessment workflow.[@cr-diver]
+
+:::{#cr-diver}
+![](assets/diver.png)
+:::
+
+:::
+
+<!--- end dive in block --->
+
+:::{.cr-section layout="overlay-right"}
+
+Storage in the cloud, QA/QC, 99% ready. [@cr-data]
+
+:::{#cr-data} 
+![](assets/general pipeline/data.jpg)
+:::
+
+Variety of approaches to cloud: Google Drive, Data Buckets, Oracle. [@cr-data-storage]
+
+:::{#cr-data-storage} 
+![](assets/general pipeline/Data storage .jpg)
+:::
+
+Goal is to have all assessment models available on virtual machines. [@cr-modelling]
+
+:::{#cr-modelling} 
+![](assets/general pipeline/Modelling.jpg)
+:::
+
+Cloud storage of all model output to archive and pull for monitoring and reference in future cycles. [@cr-model-output]
+
+:::{#cr-model-output} 
+![](assets/general pipeline/Model output.jpg)
+:::
+
+Presenting data on platforms such as Stock Smart, GitHub, and reports. [@cr-output]
+
+:::{#cr-output} 
+![](assets/general pipeline/Output.jpg)
+:::
+
+:::
+
+<!--- end summ pipeline block --->
+
+:::{.cr-section layout="overlay-center"}
+
+Pipeline Modules [@cr-larg-pipe]
+
+:::{#cr-larg-pipe}
+![](assets/Pipeline.jpg)
 :::
 
 :::

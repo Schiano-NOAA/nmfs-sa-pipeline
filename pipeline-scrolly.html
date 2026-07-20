@@ -93,10 +93,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <style>
         :root {
           --cr-narrative-text-color-overlay: #e2e2e2;
---cr-narrative-outer-margin: 1:1;
---cr-narrative-background-color-overlay: black;
 --cr-section-background-color: black;
+--cr-narrative-background-color-overlay: black;
 --cr-narrative-text-color-sidebar: #e2e2e2;
+--cr-narrative-outer-margin: 1:1;
         }
       </style>
     
@@ -121,6 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<!--- end title block --->
 <div class="cr-section cr-column-screen overlay-center">
 <div class="narrative-col">
 <div class="trigger">
@@ -136,6 +137,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<!--- end why q block --->
 <div class="cr-section cr-column-screen overlay-center">
 <div class="narrative-col">
 <div class="trigger new-trigger" data-focus-on="cr-efficiency">
@@ -176,6 +178,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<!--- end reasons block --->
 <div class="cr-section cr-column-screen overlay-center">
 <div class="narrative-col">
 <section id="foundational-projects" class="level2 narrative trigger">
@@ -207,33 +210,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sticky-col-stack">
 <div id="cr-sequence-clouds" class="sticky">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="91" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 90;"><span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>images <span class="op">=</span> [</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_00_delay-0.1s.jpg"</span><span class="op">,</span></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_01_delay-0.1s.jpg"</span><span class="op">,</span></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_02_delay-0.1s.jpg"</span><span class="op">,</span></span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_03_delay-0.1s.jpg"</span><span class="op">,</span></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_04_delay-0.1s.jpg"</span><span class="op">,</span> </span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_05_delay-0.1s.jpg"</span><span class="op">,</span></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_06_delay-0.1s.jpg"</span><span class="op">,</span></span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_07_delay-0.1s.jpg"</span><span class="op">,</span></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_08_delay-0.1s.jpg"</span><span class="op">,</span></span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_09_delay-0.1s.jpg"</span><span class="op">,</span></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_10_delay-0.1s.jpg"</span><span class="op">,</span></span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_11_delay-0.1s.jpg"</span><span class="op">,</span></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_12_delay-0.1s.jpg"</span><span class="op">,</span></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_13_delay-0.1s.jpg"</span><span class="op">,</span></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_14_delay-0.1s.jpg"</span><span class="op">,</span></span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_15_delay-0.1s.jpg"</span></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="co">// If this section's first trigger is the 3rd trigger in the document, subtract 2</span></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="co">// We use Math.max to make sure we don't end up with a negative index</span></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>relativeIndex <span class="op">=</span> crTriggerIndex <span class="op">!==</span> <span class="kw">null</span> <span class="op">?</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">0</span><span class="op">,</span> crTriggerIndex <span class="op">-</span> <span class="dv">5</span>) <span class="op">:</span> <span class="dv">0</span></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="co">// Cap it so it doesn't try to load an image beyond index 15</span></span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>currentIndex <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(relativeIndex<span class="op">,</span> images<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span>)</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;img src="</span><span class="sc">${</span>images[currentIndex]<span class="sc">}</span><span class="vs">" style="width: 100%; height: auto; max-height: 80vh; object-fit: contain;" /&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="97" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 96;"><span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>images <span class="op">=</span> [</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_00_delay-0.1s.jpg"</span><span class="op">,</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_01_delay-0.1s.jpg"</span><span class="op">,</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_02_delay-0.1s.jpg"</span><span class="op">,</span></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_03_delay-0.1s.jpg"</span><span class="op">,</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_04_delay-0.1s.jpg"</span><span class="op">,</span> </span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_05_delay-0.1s.jpg"</span><span class="op">,</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_06_delay-0.1s.jpg"</span><span class="op">,</span></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_07_delay-0.1s.jpg"</span><span class="op">,</span></span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_08_delay-0.1s.jpg"</span><span class="op">,</span></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_09_delay-0.1s.jpg"</span><span class="op">,</span></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_10_delay-0.1s.jpg"</span><span class="op">,</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_11_delay-0.1s.jpg"</span><span class="op">,</span></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_12_delay-0.1s.jpg"</span><span class="op">,</span></span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_13_delay-0.1s.jpg"</span><span class="op">,</span></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_14_delay-0.1s.jpg"</span><span class="op">,</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/clouds/frame_15_delay-0.1s.jpg"</span></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="co">// If this section's first trigger is the 3rd trigger in the document, subtract 2</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="co">// We use Math.max to make sure we don't end up with a negative index</span></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>relativeIndex <span class="op">=</span> crTriggerIndex <span class="op">!==</span> <span class="kw">null</span> <span class="op">?</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">0</span><span class="op">,</span> crTriggerIndex <span class="op">-</span> <span class="dv">5</span>) <span class="op">:</span> <span class="dv">0</span></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="co">// Cap it so it doesn't try to load an image beyond index 15</span></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>currentIndex <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(relativeIndex<span class="op">,</span> images<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;img src="</span><span class="sc">${</span>images[currentIndex]<span class="sc">}</span><span class="vs">" style="width: 100%; height: auto; max-height: 80vh; object-fit: contain;" /&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -262,12 +265,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="119" data-source-offset="-1200"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 118;"><span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>angleScale1 <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleLinear</span>()</span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">domain</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>])</span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">180</span><span class="op">,</span> <span class="dv">0</span>])</span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">clamp</span>(<span class="kw">true</span>)</span>
-<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>angle1 <span class="op">=</span> <span class="fu">angleScale1</span>(crProgressBlock)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="125" data-source-offset="-1200"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 124;"><span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>angleScale1 <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleLinear</span>()</span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">domain</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>])</span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">180</span><span class="op">,</span> <span class="dv">0</span>])</span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">clamp</span>(<span class="kw">true</span>)</span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>angle1 <span class="op">=</span> <span class="fu">angleScale1</span>(crProgressBlock)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-5" data-nodetype="declaration">
@@ -337,25 +340,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="trigger">
 <div class="narrative">
-<p><strong>3. Fisheries Integrated Modelling Systems</strong><br><br>FIMS aims to accomplish its mission with a user-friendly stock assessment tool that streamlines the development and application of scientific advice to inform current and future management needs of NOAA Fisheries’ regions. This can be acheived through: <br> 1. <strong>Meeting the needs</strong> of operational stock assessments across regions, scenarios, and data types. <br> 2. Implementing practical and <strong>robust methods.</strong> <br> 3. <strong>Estimating and projecting</strong> population trajectories, parameters, and uncertainty. <br> 4. Spanning <strong>different levels of expertise.</strong> <br> 5. Incorporating <strong>user, developer, and community</strong> contributions and feedback. <br> 6. Develop a <strong>flexible architecture</strong> to adapt to future management needs and technical advancements. <br> <br> Also operational through R code <br></p>
+<p><strong>3. Fisheries Integrated Modelling Systems</strong><br><br>FIMS aims to accomplish its mission with a user-friendly stock assessment tool that streamlines the development and application of scientific advice to inform current and future management needs of NOAA Fisheries’ regions. This can be acheived through: <br> 1. <strong>Meeting the needs</strong> of operational stock assessments across regions, scenarios, and data types. <br> 2. Implementing practical and <strong>robust methods.</strong> <br> 3. <strong>Estimating and projecting</strong> population trajectories, parameters, and uncertainty. <br> 4. Spanning <strong>different levels of expertise.</strong> <br> 5. Incorporating <strong>user, developer, and community</strong> contributions and feedback. <br> 6. Develop a <strong>flexible architecture</strong> to adapt to future management needs and technical advancements. <br> <br> Also operational through R code<br><br><code>library(FIMS)  # Load sample data  data("data_big")  # Prepare data for FIMS model  data_4_model &lt;- FIMSFrame(data_big)  # Create parameters  parameters &lt;- data_4_model |&gt;    create_default_configurations() |&gt;    create_default_parameters(data = data_4_model)  # Run the model with optimization  fit &lt;- parameters |&gt;    initialize_fims(data = data_4_model) |&gt;    fit_fims(optimize = TRUE)  # Clear memory post-run  clear()</code></p>
 </div>
-</div>
-<div class="trigger">
-<pre class="narrative"><code>library(FIMS) 
-# Load sample data 
-data("data_big") 
-# Prepare data for FIMS model 
-data_4_model &lt;- FIMSFrame(data_big) 
-# Create parameters 
-parameters &lt;- data_4_model |&gt; 
-  create_default_configurations() |&gt; 
-  create_default_parameters(data = data_4_model) 
-# Run the model with optimization 
-fit &lt;- parameters |&gt; 
-  initialize_fims(data = data_4_model) |&gt; 
-  fit_fims(optimize = TRUE) 
-# Clear memory post-run 
-clear()</code></pre>
 </div>
 </div>
 </div>
@@ -363,36 +349,36 @@ clear()</code></pre>
 <div class="sticky-col-stack">
 <div id="cr-sequence-fims" class="sticky">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="206" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 205;"><span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a>images <span class="op">=</span> [</span>
-<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/1.png"</span><span class="op">,</span></span>
-<span id="cb4-208"><a href="#cb4-208" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/2.png"</span><span class="op">,</span></span>
-<span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/3.png"</span><span class="op">,</span></span>
-<span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/4.png"</span><span class="op">,</span></span>
-<span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/5.png"</span><span class="op">,</span></span>
-<span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/6.png"</span><span class="op">,</span></span>
-<span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/7.png"</span><span class="op">,</span></span>
-<span id="cb4-214"><a href="#cb4-214" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/8.png"</span><span class="op">,</span></span>
-<span id="cb4-215"><a href="#cb4-215" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/9.png"</span><span class="op">,</span></span>
-<span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/10.png"</span><span class="op">,</span></span>
-<span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/11.png"</span><span class="op">,</span></span>
-<span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/12.png"</span><span class="op">,</span></span>
-<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/13.png"</span><span class="op">,</span></span>
-<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/14.png"</span><span class="op">,</span></span>
-<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/15.png"</span><span class="op">,</span></span>
-<span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/16.png"</span><span class="op">,</span></span>
-<span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/17.png"</span><span class="op">,</span></span>
-<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/18.png"</span><span class="op">,</span></span>
-<span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/19.png"</span></span>
-<span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb4-227"><a href="#cb4-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-228"><a href="#cb4-228" aria-hidden="true" tabindex="-1"></a><span class="co">// If this section's first trigger is the 3rd trigger in the document, subtract 2</span></span>
-<span id="cb4-229"><a href="#cb4-229" aria-hidden="true" tabindex="-1"></a><span class="co">// We use Math.max to make sure we don't end up with a negative index</span></span>
-<span id="cb4-230"><a href="#cb4-230" aria-hidden="true" tabindex="-1"></a>relativeIndex <span class="op">=</span> crTriggerIndex <span class="op">!==</span> <span class="kw">null</span> <span class="op">?</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">0</span><span class="op">,</span> crTriggerIndex <span class="op">-</span> <span class="dv">24</span>) <span class="op">:</span> <span class="dv">0</span></span>
-<span id="cb4-231"><a href="#cb4-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-232"><a href="#cb4-232" aria-hidden="true" tabindex="-1"></a><span class="co">// Cap it so it doesn't try to load an image beyond index 15</span></span>
-<span id="cb4-233"><a href="#cb4-233" aria-hidden="true" tabindex="-1"></a>currentIndex <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(relativeIndex<span class="op">,</span> images<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span>)</span>
-<span id="cb4-234"><a href="#cb4-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-235"><a href="#cb4-235" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;img src="</span><span class="sc">${</span>images[currentIndex]<span class="sc">}</span><span class="vs">" style="width: 100%; height: auto; max-height: 80vh; object-fit: contain;" /&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="209" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 208;"><span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a>images <span class="op">=</span> [</span>
+<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/1.png"</span><span class="op">,</span></span>
+<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/2.png"</span><span class="op">,</span></span>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/3.png"</span><span class="op">,</span></span>
+<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/4.png"</span><span class="op">,</span></span>
+<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/5.png"</span><span class="op">,</span></span>
+<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/6.png"</span><span class="op">,</span></span>
+<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/7.png"</span><span class="op">,</span></span>
+<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/8.png"</span><span class="op">,</span></span>
+<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/9.png"</span><span class="op">,</span></span>
+<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/10.png"</span><span class="op">,</span></span>
+<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/11.png"</span><span class="op">,</span></span>
+<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/12.png"</span><span class="op">,</span></span>
+<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/13.png"</span><span class="op">,</span></span>
+<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/14.png"</span><span class="op">,</span></span>
+<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/15.png"</span><span class="op">,</span></span>
+<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/16.png"</span><span class="op">,</span></span>
+<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/17.png"</span><span class="op">,</span></span>
+<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/18.png"</span><span class="op">,</span></span>
+<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/19.png"</span></span>
+<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a><span class="co">// If this section's first trigger is the 3rd trigger in the document, subtract 2</span></span>
+<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a><span class="co">// We use Math.max to make sure we don't end up with a negative index</span></span>
+<span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a>relativeIndex <span class="op">=</span> crTriggerIndex <span class="op">!==</span> <span class="kw">null</span> <span class="op">?</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">0</span><span class="op">,</span> crTriggerIndex <span class="op">-</span> <span class="dv">24</span>) <span class="op">:</span> <span class="dv">0</span></span>
+<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a><span class="co">// Cap it so it doesn't try to load an image beyond index 15</span></span>
+<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a>currentIndex <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(relativeIndex<span class="op">,</span> images<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;img src="</span><span class="sc">${</span>images[currentIndex]<span class="sc">}</span><span class="vs">" style="width: 100%; height: auto; max-height: 80vh; object-fit: contain;" /&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -421,12 +407,12 @@ clear()</code></pre>
 </div>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="237" data-source-offset="-1152"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 236;"><span id="cb5-237"><a href="#cb5-237" aria-hidden="true" tabindex="-1"></a>angleScale1 <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleLinear</span>()</span>
-<span id="cb5-238"><a href="#cb5-238" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">domain</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>])</span>
-<span id="cb5-239"><a href="#cb5-239" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">180</span><span class="op">,</span> <span class="dv">0</span>])</span>
-<span id="cb5-240"><a href="#cb5-240" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">clamp</span>(<span class="kw">true</span>)</span>
-<span id="cb5-241"><a href="#cb5-241" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb5-242"><a href="#cb5-242" aria-hidden="true" tabindex="-1"></a>angle1 <span class="op">=</span> <span class="fu">angleScale1</span>(crProgressBlock)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="240" data-source-offset="-1152"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 239;"><span id="cb4-240"><a href="#cb4-240" aria-hidden="true" tabindex="-1"></a>angleScale1 <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleLinear</span>()</span>
+<span id="cb4-241"><a href="#cb4-241" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">domain</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>])</span>
+<span id="cb4-242"><a href="#cb4-242" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">180</span><span class="op">,</span> <span class="dv">0</span>])</span>
+<span id="cb4-243"><a href="#cb4-243" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">clamp</span>(<span class="kw">true</span>)</span>
+<span id="cb4-244"><a href="#cb4-244" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-245"><a href="#cb4-245" aria-hidden="true" tabindex="-1"></a>angle1 <span class="op">=</span> <span class="fu">angleScale1</span>(crProgressBlock)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-5" data-nodetype="declaration">
@@ -446,11 +432,241 @@ clear()</code></pre>
 </div>
 </div>
 </div>
+<div class="cr-section cr-column-screen sidebar-left">
+<div class="narrative-col">
+<div class="progress-block">
+<div class="trigger new-trigger" data-focus-on="cr-sequence-workflows">
+<div class="narrative">
+
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<p><strong>4. The Workflows Project</strong><br><br>A focus on standardization and semi-automation of stock assessment reports. <br> Built upon a need to identify bottlenecks: <br> * Data processing <br> * Reporting requirements <br> * Section 508 compliance <br> Currently, the team built 2 R packages that addresses partial automation of reports including full-automation to make reports 508 compliant. <br> <br> <strong>{asar}</strong> <br> Build the foundation to standardization reporting along with a set of NOAA Fisheries Stock Assessment report guidelines through R code and a reproducible approach using Quarto.<br><br><code>library(asar) # create report template asar::create_template(   species = "Petrale sole",     authors = c("Jane Doe"="OST"),     region = "West Coast",     office = "NWFSC") # render report quarto::quarto_render("sar_WC_Petrale_sole_skeleton.qmd")</code> <br><br> <strong>{stockplotr}</strong><br><code>library(stockplotr) # standardize model output petrale &lt;- convert_output(file = "Report.sso") # Create a table table_index(petrale) # Create_figure plot_spawning_biomass(petrale)</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-sequence-workflows" class="sticky">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb5" data-startfrom="298" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 297;"><span id="cb5-298"><a href="#cb5-298" aria-hidden="true" tabindex="-1"></a>images <span class="op">=</span> [</span>
+<span id="cb5-299"><a href="#cb5-299" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/1.png"</span><span class="op">,</span></span>
+<span id="cb5-300"><a href="#cb5-300" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/2.png"</span><span class="op">,</span></span>
+<span id="cb5-301"><a href="#cb5-301" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/3.png"</span><span class="op">,</span></span>
+<span id="cb5-302"><a href="#cb5-302" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/4.png"</span><span class="op">,</span></span>
+<span id="cb5-303"><a href="#cb5-303" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/5.png"</span><span class="op">,</span></span>
+<span id="cb5-304"><a href="#cb5-304" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/6.png"</span><span class="op">,</span></span>
+<span id="cb5-305"><a href="#cb5-305" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/7.png"</span><span class="op">,</span></span>
+<span id="cb5-306"><a href="#cb5-306" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/8.png"</span><span class="op">,</span></span>
+<span id="cb5-307"><a href="#cb5-307" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/9.png"</span><span class="op">,</span></span>
+<span id="cb5-308"><a href="#cb5-308" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/10.png"</span><span class="op">,</span></span>
+<span id="cb5-309"><a href="#cb5-309" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/11.png"</span><span class="op">,</span></span>
+<span id="cb5-310"><a href="#cb5-310" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/12.png"</span><span class="op">,</span></span>
+<span id="cb5-311"><a href="#cb5-311" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/13.png"</span><span class="op">,</span></span>
+<span id="cb5-312"><a href="#cb5-312" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/14.png"</span><span class="op">,</span></span>
+<span id="cb5-313"><a href="#cb5-313" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/15.png"</span><span class="op">,</span></span>
+<span id="cb5-314"><a href="#cb5-314" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/16.png"</span><span class="op">,</span></span>
+<span id="cb5-315"><a href="#cb5-315" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/17.png"</span><span class="op">,</span></span>
+<span id="cb5-316"><a href="#cb5-316" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/18.png"</span><span class="op">,</span></span>
+<span id="cb5-317"><a href="#cb5-317" aria-hidden="true" tabindex="-1"></a>  <span class="st">"assets/fims_animation/19.png"</span></span>
+<span id="cb5-318"><a href="#cb5-318" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb5-319"><a href="#cb5-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-320"><a href="#cb5-320" aria-hidden="true" tabindex="-1"></a><span class="co">// If this section's first trigger is the 3rd trigger in the document, subtract 2</span></span>
+<span id="cb5-321"><a href="#cb5-321" aria-hidden="true" tabindex="-1"></a><span class="co">// We use Math.max to make sure we don't end up with a negative index</span></span>
+<span id="cb5-322"><a href="#cb5-322" aria-hidden="true" tabindex="-1"></a>relativeIndex <span class="op">=</span> crTriggerIndex <span class="op">!==</span> <span class="kw">null</span> <span class="op">?</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="dv">0</span><span class="op">,</span> crTriggerIndex <span class="op">-</span> <span class="dv">24</span>) <span class="op">:</span> <span class="dv">0</span></span>
+<span id="cb5-323"><a href="#cb5-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-324"><a href="#cb5-324" aria-hidden="true" tabindex="-1"></a><span class="co">// Cap it so it doesn't try to load an image beyond index 15</span></span>
+<span id="cb5-325"><a href="#cb5-325" aria-hidden="true" tabindex="-1"></a>currentIndex <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(relativeIndex<span class="op">,</span> images<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb5-326"><a href="#cb5-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-327"><a href="#cb5-327" aria-hidden="true" tabindex="-1"></a><span class="fu">html</span><span class="vs">`&lt;img src="</span><span class="sc">${</span>images[currentIndex]<span class="sc">}</span><span class="vs">" style="width: 100%; height: auto; max-height: 80vh; object-fit: contain;" /&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="329" data-source-offset="-1152"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 328;"><span id="cb6-329"><a href="#cb6-329" aria-hidden="true" tabindex="-1"></a>angleScale1 <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleLinear</span>()</span>
+<span id="cb6-330"><a href="#cb6-330" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">domain</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>])</span>
+<span id="cb6-331"><a href="#cb6-331" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">180</span><span class="op">,</span> <span class="dv">0</span>])</span>
+<span id="cb6-332"><a href="#cb6-332" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">clamp</span>(<span class="kw">true</span>)</span>
+<span id="cb6-333"><a href="#cb6-333" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-334"><a href="#cb6-334" aria-hidden="true" tabindex="-1"></a>angle1 <span class="op">=</span> <span class="fu">angleScale1</span>(crProgressBlock)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--- end projects block --->
+<div class="cr-section cr-column-screen overlay-center">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-underwater">
+<div class="narrative">
+<p>The Stock Assessment Pipeline</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-underwater" class="sticky">
+<p><img src="assets/underwater.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</div>
+<!--- end pipeline title transition block --->
+<div class="cr-section cr-column-screen sidebar-right">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-diver">
+<div class="narrative">
+<p>Let’s Dive In<br>piece of the pipeline connects to form partially and fully automated components. Each of these “modules” could be incorporated into the workflow of an assessment scientist at NOAA.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-diver">
+<div class="narrative">
+<p>Intention</p>
+</div>
+</div>
+<div class="trigger">
+<div class="narrative">
+<ol type="1">
+<li><div data-focus-on="cr-diver">
+<p>Provide assessment scientists with the supplies to build the foundation for an automated workflow.</p>
+</div></li>
+<li><div data-focus-on="cr-diver">
+<p>Build and understand the principles of a workflow in the cloud.</p>
+</div></li>
+<li><div data-focus-on="cr-diver">
+<p>Provide modules that can be extracted from the pipeline.</p>
+</div></li>
+<li><div data-focus-on="cr-diver">
+<p>Find solutions to make cloud data and data processing more attainable.</p>
+</div></li>
+</ol>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-diver">
+<div class="narrative">
+<p><strong>Long term goal: an established pipeline that can provide annual updates for a given stock triggered by new data.</strong><br>NOTE: This is in early stage development and processes are not completely developed. We are currently working to make connections among projects and current efforts along with identifying points of contact for each portion of the pipeline. We plan to make use of existing and new efforts to develop a working example to demonstrate the potential for an established automated stock assessment workflow.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-diver" class="sticky">
+<p><img src="assets/diver.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</div>
+<!--- end dive in block --->
+<div class="cr-section cr-column-screen overlay-right">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-data">
+<div class="narrative">
+<p>Storage in the cloud, QA/QC, 99% ready.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-data-storage">
+<div class="narrative">
+<p>Variety of approaches to cloud: Google Drive, Data Buckets, Oracle.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-modelling">
+<div class="narrative">
+<p>Goal is to have all assessment models available on virtual machines.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-model-output">
+<div class="narrative">
+<p>Cloud storage of all model output to archive and pull for monitoring and reference in future cycles.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-output">
+<div class="narrative">
+<p>Presenting data on platforms such as Stock Smart, GitHub, and reports.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-data" class="sticky">
+<p><img src="assets/general%20pipeline/data.jpg" class="img-fluid"></p>
+</div>
+<div id="cr-data-storage" class="sticky">
+<p><img src="assets/general%20pipeline/Data%20storage%20.jpg" class="img-fluid"></p>
+</div>
+<div id="cr-modelling" class="sticky">
+<p><img src="assets/general%20pipeline/Modelling.jpg" class="img-fluid"></p>
+</div>
+<div id="cr-model-output" class="sticky">
+<p><img src="assets/general%20pipeline/Model%20output.jpg" class="img-fluid"></p>
+</div>
+<div id="cr-output" class="sticky">
+<p><img src="assets/general%20pipeline/Output.jpg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</div>
+<!--- end summ pipeline block --->
+<div class="cr-section cr-column-screen overlay-center">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-larg-pipe">
+<div class="narrative">
+<p>Pipeline Modules</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-larg-pipe" class="sticky">
+<p><img src="assets/Pipeline.jpg" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</div>
 
 </main>
 <!-- /main column -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltYWdlcyA9IFtcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDBfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDFfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDJfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDNfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDRfZGVsYXktMC4xcy5qcGdcIiwgXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA1X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA2X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA3X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA4X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA5X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzEwX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzExX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzEyX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzEzX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzE0X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzE1X2RlbGF5LTAuMXMuanBnXCJcclxuXVxyXG5cclxuLy8gSWYgdGhpcyBzZWN0aW9uJ3MgZmlyc3QgdHJpZ2dlciBpcyB0aGUgM3JkIHRyaWdnZXIgaW4gdGhlIGRvY3VtZW50LCBzdWJ0cmFjdCAyXHJcbi8vIFdlIHVzZSBNYXRoLm1heCB0byBtYWtlIHN1cmUgd2UgZG9uJ3QgZW5kIHVwIHdpdGggYSBuZWdhdGl2ZSBpbmRleFxyXG5yZWxhdGl2ZUluZGV4ID0gY3JUcmlnZ2VySW5kZXggIT09IG51bGwgPyBNYXRoLm1heCgwLCBjclRyaWdnZXJJbmRleCAtIDUpIDogMFxyXG5cclxuLy8gQ2FwIGl0IHNvIGl0IGRvZXNuJ3QgdHJ5IHRvIGxvYWQgYW4gaW1hZ2UgYmV5b25kIGluZGV4IDE1XHJcbmN1cnJlbnRJbmRleCA9IE1hdGgubWluKHJlbGF0aXZlSW5kZXgsIGltYWdlcy5sZW5ndGggLSAxKVxyXG5cclxuaHRtbGA8aW1nIHNyYz1cIiR7aW1hZ2VzW2N1cnJlbnRJbmRleF19XCIgc3R5bGU9XCJ3aWR0aDogMTAwJTsgaGVpZ2h0OiBhdXRvOyBtYXgtaGVpZ2h0OiA4MHZoOyBvYmplY3QtZml0OiBjb250YWluO1wiIC8+YFxyXG5cclxuYW5nbGVTY2FsZTEgPSBkMy5zY2FsZUxpbmVhcigpXHJcbiAgLmRvbWFpbihbMCwgMV0pXHJcbiAgLnJhbmdlKFstMTgwLCAwXSlcclxuICAuY2xhbXAodHJ1ZSlcclxuICAgIFxyXG5hbmdsZTEgPSBhbmdsZVNjYWxlMShjclByb2dyZXNzQmxvY2spXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltYWdlcyA9IFtcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xLnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzIucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vMy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi80LnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzUucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vNi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi83LnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzgucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vOS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xOC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xOS5wbmdcIlxyXG5dXHJcblxyXG4vLyBJZiB0aGlzIHNlY3Rpb24ncyBmaXJzdCB0cmlnZ2VyIGlzIHRoZSAzcmQgdHJpZ2dlciBpbiB0aGUgZG9jdW1lbnQsIHN1YnRyYWN0IDJcclxuLy8gV2UgdXNlIE1hdGgubWF4IHRvIG1ha2Ugc3VyZSB3ZSBkb24ndCBlbmQgdXAgd2l0aCBhIG5lZ2F0aXZlIGluZGV4XHJcbnJlbGF0aXZlSW5kZXggPSBjclRyaWdnZXJJbmRleCAhPT0gbnVsbCA/IE1hdGgubWF4KDAsIGNyVHJpZ2dlckluZGV4IC0gMjQpIDogMFxyXG5cclxuLy8gQ2FwIGl0IHNvIGl0IGRvZXNuJ3QgdHJ5IHRvIGxvYWQgYW4gaW1hZ2UgYmV5b25kIGluZGV4IDE1XHJcbmN1cnJlbnRJbmRleCA9IE1hdGgubWluKHJlbGF0aXZlSW5kZXgsIGltYWdlcy5sZW5ndGggLSAxKVxyXG5cclxuaHRtbGA8aW1nIHNyYz1cIiR7aW1hZ2VzW2N1cnJlbnRJbmRleF19XCIgc3R5bGU9XCJ3aWR0aDogMTAwJTsgaGVpZ2h0OiBhdXRvOyBtYXgtaGVpZ2h0OiA4MHZoOyBvYmplY3QtZml0OiBjb250YWluO1wiIC8+YFxyXG5cclxuYW5nbGVTY2FsZTEgPSBkMy5zY2FsZUxpbmVhcigpXHJcbiAgLmRvbWFpbihbMCwgMV0pXHJcbiAgLnJhbmdlKFstMTgwLCAwXSlcclxuICAuY2xhbXAodHJ1ZSlcclxuICAgIFxyXG5hbmdsZTEgPSBhbmdsZVNjYWxlMShjclByb2dyZXNzQmxvY2spXHJcbiJ9XX0=
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltYWdlcyA9IFtcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDBfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDFfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDJfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDNfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDRfZGVsYXktMC4xcy5qcGdcIiwgXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA1X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA2X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA3X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA4X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA5X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzEwX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzExX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzEyX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzEzX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzE0X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzE1X2RlbGF5LTAuMXMuanBnXCJcclxuXVxyXG5cclxuLy8gSWYgdGhpcyBzZWN0aW9uJ3MgZmlyc3QgdHJpZ2dlciBpcyB0aGUgM3JkIHRyaWdnZXIgaW4gdGhlIGRvY3VtZW50LCBzdWJ0cmFjdCAyXHJcbi8vIFdlIHVzZSBNYXRoLm1heCB0byBtYWtlIHN1cmUgd2UgZG9uJ3QgZW5kIHVwIHdpdGggYSBuZWdhdGl2ZSBpbmRleFxyXG5yZWxhdGl2ZUluZGV4ID0gY3JUcmlnZ2VySW5kZXggIT09IG51bGwgPyBNYXRoLm1heCgwLCBjclRyaWdnZXJJbmRleCAtIDUpIDogMFxyXG5cclxuLy8gQ2FwIGl0IHNvIGl0IGRvZXNuJ3QgdHJ5IHRvIGxvYWQgYW4gaW1hZ2UgYmV5b25kIGluZGV4IDE1XHJcbmN1cnJlbnRJbmRleCA9IE1hdGgubWluKHJlbGF0aXZlSW5kZXgsIGltYWdlcy5sZW5ndGggLSAxKVxyXG5cclxuaHRtbGA8aW1nIHNyYz1cIiR7aW1hZ2VzW2N1cnJlbnRJbmRleF19XCIgc3R5bGU9XCJ3aWR0aDogMTAwJTsgaGVpZ2h0OiBhdXRvOyBtYXgtaGVpZ2h0OiA4MHZoOyBvYmplY3QtZml0OiBjb250YWluO1wiIC8+YFxyXG5cclxuYW5nbGVTY2FsZTEgPSBkMy5zY2FsZUxpbmVhcigpXHJcbiAgLmRvbWFpbihbMCwgMV0pXHJcbiAgLnJhbmdlKFstMTgwLCAwXSlcclxuICAuY2xhbXAodHJ1ZSlcclxuICAgIFxyXG5hbmdsZTEgPSBhbmdsZVNjYWxlMShjclByb2dyZXNzQmxvY2spXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltYWdlcyA9IFtcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xLnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzIucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vMy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi80LnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzUucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vNi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi83LnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzgucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vOS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xOC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xOS5wbmdcIlxyXG5dXHJcblxyXG4vLyBJZiB0aGlzIHNlY3Rpb24ncyBmaXJzdCB0cmlnZ2VyIGlzIHRoZSAzcmQgdHJpZ2dlciBpbiB0aGUgZG9jdW1lbnQsIHN1YnRyYWN0IDJcclxuLy8gV2UgdXNlIE1hdGgubWF4IHRvIG1ha2Ugc3VyZSB3ZSBkb24ndCBlbmQgdXAgd2l0aCBhIG5lZ2F0aXZlIGluZGV4XHJcbnJlbGF0aXZlSW5kZXggPSBjclRyaWdnZXJJbmRleCAhPT0gbnVsbCA/IE1hdGgubWF4KDAsIGNyVHJpZ2dlckluZGV4IC0gMjQpIDogMFxyXG5cclxuLy8gQ2FwIGl0IHNvIGl0IGRvZXNuJ3QgdHJ5IHRvIGxvYWQgYW4gaW1hZ2UgYmV5b25kIGluZGV4IDE1XHJcbmN1cnJlbnRJbmRleCA9IE1hdGgubWluKHJlbGF0aXZlSW5kZXgsIGltYWdlcy5sZW5ndGggLSAxKVxyXG5cclxuaHRtbGA8aW1nIHNyYz1cIiR7aW1hZ2VzW2N1cnJlbnRJbmRleF19XCIgc3R5bGU9XCJ3aWR0aDogMTAwJTsgaGVpZ2h0OiBhdXRvOyBtYXgtaGVpZ2h0OiA4MHZoOyBvYmplY3QtZml0OiBjb250YWluO1wiIC8+YFxyXG5cclxuYW5nbGVTY2FsZTEgPSBkMy5zY2FsZUxpbmVhcigpXHJcbiAgLmRvbWFpbihbMCwgMV0pXHJcbiAgLnJhbmdlKFstMTgwLCAwXSlcclxuICAuY2xhbXAodHJ1ZSlcclxuICAgIFxyXG5hbmdsZTEgPSBhbmdsZVNjYWxlMShjclByb2dyZXNzQmxvY2spXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltYWdlcyA9IFtcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xLnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzIucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vMy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi80LnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzUucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vNi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi83LnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzgucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vOS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xOC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xOS5wbmdcIlxyXG5dXHJcblxyXG4vLyBJZiB0aGlzIHNlY3Rpb24ncyBmaXJzdCB0cmlnZ2VyIGlzIHRoZSAzcmQgdHJpZ2dlciBpbiB0aGUgZG9jdW1lbnQsIHN1YnRyYWN0IDJcclxuLy8gV2UgdXNlIE1hdGgubWF4IHRvIG1ha2Ugc3VyZSB3ZSBkb24ndCBlbmQgdXAgd2l0aCBhIG5lZ2F0aXZlIGluZGV4XHJcbnJlbGF0aXZlSW5kZXggPSBjclRyaWdnZXJJbmRleCAhPT0gbnVsbCA/IE1hdGgubWF4KDAsIGNyVHJpZ2dlckluZGV4IC0gMjQpIDogMFxyXG5cclxuLy8gQ2FwIGl0IHNvIGl0IGRvZXNuJ3QgdHJ5IHRvIGxvYWQgYW4gaW1hZ2UgYmV5b25kIGluZGV4IDE1XHJcbmN1cnJlbnRJbmRleCA9IE1hdGgubWluKHJlbGF0aXZlSW5kZXgsIGltYWdlcy5sZW5ndGggLSAxKVxyXG5cclxuaHRtbGA8aW1nIHNyYz1cIiR7aW1hZ2VzW2N1cnJlbnRJbmRleF19XCIgc3R5bGU9XCJ3aWR0aDogMTAwJTsgaGVpZ2h0OiBhdXRvOyBtYXgtaGVpZ2h0OiA4MHZoOyBvYmplY3QtZml0OiBjb250YWluO1wiIC8+YFxyXG5cclxuYW5nbGVTY2FsZTEgPSBkMy5zY2FsZUxpbmVhcigpXHJcbiAgLmRvbWFpbihbMCwgMV0pXHJcbiAgLnJhbmdlKFstMTgwLCAwXSlcclxuICAuY2xhbXAodHJ1ZSlcclxuICAgIFxyXG5hbmdsZTEgPSBhbmdsZVNjYWxlMShjclByb2dyZXNzQmxvY2spXHJcbiJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
