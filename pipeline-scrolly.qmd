@@ -325,13 +325,6 @@ relativeIndex = crTriggerIndex !== null ? Math.max(0, crTriggerIndex - 24) : 0
 currentIndex = Math.min(relativeIndex, images.length - 1)
 
 html`<img src="${images[currentIndex]}" style="width: 100%; height: auto; max-height: 80vh; object-fit: contain;" />`
-
-angleScale1 = d3.scaleLinear()
-  .domain([0, 1])
-  .range([-180, 0])
-  .clamp(true)
-    
-angle1 = angleScale1(crProgressBlock)
 ```
 :::
 
@@ -412,9 +405,34 @@ Presenting data on platforms such as Stock Smart, GitHub, and reports. [@cr-outp
 
 <!--- end summ pipeline block --->
 
-:::{.cr-section layout="overlay-center"}
+:::{.cr-section layout="overlay-right"}
 
 Pipeline Modules [@cr-larg-pipe]
+
+**Survey Tracking**<br><br>Linkages to surveys in assessments.<br><br>By establishing a process that pulls data from specific surveys, we will be able to directly identify then measure the surveys used in assessments and help calculate their impact. [@cr-larg-pipe]{scale-by="3" pan-to="98%,70%"}
+
+**QA/QC & 99% Use-Case Data**<br><br>Data is available and ready for analysis.<br><br>The 99% use-case standard product is the operational, "downstream-ready" standard for all survey data, ensuring 99% of assessment users can utilize it without bespoke cleaning. This data is fully accessible in the cloud. [@cr-larg-pipe]{scale-by="3" pan-to="68%,70%"}
+
+**Data Processing**<br><br>R packages to extract and clean.<br><br>Fundamental improvements to data quality and preparation have been in the works. The mandate to move data to the cloud by the end of 2026 makes data readily available to create linkages for data extraction and preparation packages. [@cr-larg-pipe]{scale-by="3" pan-to="39%,70%"}
+
+**Data Preparation**<br><br>Getting data input ready.<br><br>Making use of the many currently available packages along with transforming current code into R package structures and functions will allow scientists to create reproducible workflows leading to automation.<br>By having a centralized location and approach, we can link indices of abundance to other down-stream products like DisMAP. [@cr-larg-pipe]{scale-by="3" pan-to="-5%,70%"}
+
+**Virtual Machines**<br><br>Accessible online containing pre-configured assessment models.<br><br>Once established, the scientist can execute the assessment model, bridging code, and sensitivity runs on the machine.<br><br>
+![](assets/computa.jpg)
+<br>Bash scripts and R scripts for other processes during execution of the model are stored in GitHub. [@cr-larg-pipe]{scale-by="3" pan-to="-33%,70%"}
+
+**GitHub**<br><br>Stores scripts and other files to execute the pipeline.<br><br>Most of the processes that create the automated pipeline are stored in the GitHub repository specific to a stock.<br><br>
+![](assets/gh_template.jpg)
+<br>We can use "tagging" in a repository to identify the year of the assessment without exponentially increasing the number of files in the repository. [@cr-larg-pipe]{scale-by="3" pan-to="-33%,70%"}
+
+**Model Results Storage**<br><br>Centralized storage of all assessment model results.<br><br>Model results will be stored in a short-term Google Data Bucket with a transition to long-term storage such as Oracle.<br><br>
+![](assets/oracle.png){width="30%" style="display: block; margin: 0 auto;"} [@cr-larg-pipe]{scale-by="3" pan-to="-63%,70%"}
+
+**Stock Smart/SIS**<br><br>Creating Direct connections from shared bucket to SIS.<br><br>Using an R function, analysts can send model results directly to SIS which can be later uploaded to stock smart. Potential model comparison and interactive platform for management during review could be developed in the future. [@cr-larg-pipe]{scale-by="3" pan-to="-85%,70%"}
+
+**Reporting**<br><br>{asar}, {stockplotr}, & GitHub.<br><br>Partially automated reports are stored on a standard GitHub repository indicating the region and stock. Historical assessments can be viewed over time by using the tagging features in GitHub. [@cr-larg-pipe]{scale-by="3" pan-to="-85%,70%"}
+
+**New data = repeat workflow** [@cr-larg-pipe]
 
 :::{#cr-larg-pipe}
 ![](assets/Pipeline.jpg)

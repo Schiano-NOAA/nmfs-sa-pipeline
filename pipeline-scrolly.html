@@ -93,10 +93,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <style>
         :root {
           --cr-narrative-text-color-overlay: #e2e2e2;
+--cr-narrative-outer-margin: 1:1;
+--cr-narrative-text-color-sidebar: #e2e2e2;
 --cr-section-background-color: black;
 --cr-narrative-background-color-overlay: black;
---cr-narrative-text-color-sidebar: #e2e2e2;
---cr-narrative-outer-margin: 1:1;
         }
       </style>
     
@@ -509,26 +509,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb6" data-startfrom="329" data-source-offset="-1152"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 328;"><span id="cb6-329"><a href="#cb6-329" aria-hidden="true" tabindex="-1"></a>angleScale1 <span class="op">=</span> d3<span class="op">.</span><span class="fu">scaleLinear</span>()</span>
-<span id="cb6-330"><a href="#cb6-330" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">domain</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>])</span>
-<span id="cb6-331"><a href="#cb6-331" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">range</span>([<span class="op">-</span><span class="dv">180</span><span class="op">,</span> <span class="dv">0</span>])</span>
-<span id="cb6-332"><a href="#cb6-332" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">clamp</span>(<span class="kw">true</span>)</span>
-<span id="cb6-333"><a href="#cb6-333" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-334"><a href="#cb6-334" aria-hidden="true" tabindex="-1"></a>angle1 <span class="op">=</span> <span class="fu">angleScale1</span>(crProgressBlock)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-3-5" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-3-6" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -646,11 +626,61 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <!--- end summ pipeline block --->
-<div class="cr-section cr-column-screen overlay-center">
+<div class="cr-section dimmed-story cr-column-screen overlay-right">
 <div class="narrative-col">
 <div class="trigger new-trigger" data-focus-on="cr-larg-pipe">
 <div class="narrative">
 <p>Pipeline Modules</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="3" data-focus-on="cr-larg-pipe" data-pan-to="98%,70%">
+<div class="narrative">
+<p><strong>Survey Tracking</strong><br><br>Linkages to surveys in assessments.<br><br>By establishing a process that pulls data from specific surveys, we will be able to directly identify then measure the surveys used in assessments and help calculate their impact.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="3" data-focus-on="cr-larg-pipe" data-pan-to="68%,70%">
+<div class="narrative">
+<p><strong>QA/QC &amp; 99% Use-Case Data</strong><br><br>Data is available and ready for analysis.<br><br>The 99% use-case standard product is the operational, “downstream-ready” standard for all survey data, ensuring 99% of assessment users can utilize it without bespoke cleaning. This data is fully accessible in the cloud.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="3" data-focus-on="cr-larg-pipe" data-pan-to="39%,70%">
+<div class="narrative">
+<p><strong>Data Processing</strong><br><br>R packages to extract and clean.<br><br>Fundamental improvements to data quality and preparation have been in the works. The mandate to move data to the cloud by the end of 2026 makes data readily available to create linkages for data extraction and preparation packages.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="3" data-focus-on="cr-larg-pipe" data-pan-to="-5%,70%">
+<div class="narrative">
+<p><strong>Data Preparation</strong><br><br>Getting data input ready.<br><br>Making use of the many currently available packages along with transforming current code into R package structures and functions will allow scientists to create reproducible workflows leading to automation.<br>By having a centralized location and approach, we can link indices of abundance to other down-stream products like DisMAP.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="3" data-focus-on="cr-larg-pipe" data-pan-to="-33%,70%">
+<div class="narrative">
+<p><strong>Virtual Machines</strong><br><br>Accessible online containing pre-configured assessment models.<br><br>Once established, the scientist can execute the assessment model, bridging code, and sensitivity runs on the machine.<br><br> <img src="assets/computa.jpg" class="img-fluid"> <br>Bash scripts and R scripts for other processes during execution of the model are stored in GitHub.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="3" data-focus-on="cr-larg-pipe" data-pan-to="-33%,70%">
+<div class="narrative">
+<p><strong>GitHub</strong><br><br>Stores scripts and other files to execute the pipeline.<br><br>Most of the processes that create the automated pipeline are stored in the GitHub repository specific to a stock.<br><br> <img src="assets/gh_template.jpg" class="img-fluid"> <br>We can use “tagging” in a repository to identify the year of the assessment without exponentially increasing the number of files in the repository.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="3" data-focus-on="cr-larg-pipe" data-pan-to="-63%,70%">
+<div class="narrative">
+<p><strong>Model Results Storage</strong><br><br>Centralized storage of all assessment model results.<br><br>Model results will be stored in a short-term Google Data Bucket with a transition to long-term storage such as Oracle.<br><br> <img src="assets/oracle.png" class="img-fluid" style="display: block; margin: 0 auto;;width:30.0%"></p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="3" data-focus-on="cr-larg-pipe" data-pan-to="-85%,70%">
+<div class="narrative">
+<p><strong>Stock Smart/SIS</strong><br><br>Creating Direct connections from shared bucket to SIS.<br><br>Using an R function, analysts can send model results directly to SIS which can be later uploaded to stock smart. Potential model comparison and interactive platform for management during review could be developed in the future.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-scale-by="3" data-focus-on="cr-larg-pipe" data-pan-to="-85%,70%">
+<div class="narrative">
+<p><strong>Reporting</strong><br><br>{asar}, {stockplotr}, &amp; GitHub.<br><br>Partially automated reports are stored on a standard GitHub repository indicating the region and stock. Historical assessments can be viewed over time by using the tagging features in GitHub.</p>
+</div>
+</div>
+<div class="trigger new-trigger" data-focus-on="cr-larg-pipe">
+<div class="narrative">
+<p><strong>New data = repeat workflow</strong></p>
 </div>
 </div>
 </div>
@@ -666,7 +696,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </main>
 <!-- /main column -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltYWdlcyA9IFtcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDBfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDFfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDJfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDNfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDRfZGVsYXktMC4xcy5qcGdcIiwgXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA1X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA2X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA3X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA4X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA5X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzEwX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzExX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzEyX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzEzX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzE0X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzE1X2RlbGF5LTAuMXMuanBnXCJcclxuXVxyXG5cclxuLy8gSWYgdGhpcyBzZWN0aW9uJ3MgZmlyc3QgdHJpZ2dlciBpcyB0aGUgM3JkIHRyaWdnZXIgaW4gdGhlIGRvY3VtZW50LCBzdWJ0cmFjdCAyXHJcbi8vIFdlIHVzZSBNYXRoLm1heCB0byBtYWtlIHN1cmUgd2UgZG9uJ3QgZW5kIHVwIHdpdGggYSBuZWdhdGl2ZSBpbmRleFxyXG5yZWxhdGl2ZUluZGV4ID0gY3JUcmlnZ2VySW5kZXggIT09IG51bGwgPyBNYXRoLm1heCgwLCBjclRyaWdnZXJJbmRleCAtIDUpIDogMFxyXG5cclxuLy8gQ2FwIGl0IHNvIGl0IGRvZXNuJ3QgdHJ5IHRvIGxvYWQgYW4gaW1hZ2UgYmV5b25kIGluZGV4IDE1XHJcbmN1cnJlbnRJbmRleCA9IE1hdGgubWluKHJlbGF0aXZlSW5kZXgsIGltYWdlcy5sZW5ndGggLSAxKVxyXG5cclxuaHRtbGA8aW1nIHNyYz1cIiR7aW1hZ2VzW2N1cnJlbnRJbmRleF19XCIgc3R5bGU9XCJ3aWR0aDogMTAwJTsgaGVpZ2h0OiBhdXRvOyBtYXgtaGVpZ2h0OiA4MHZoOyBvYmplY3QtZml0OiBjb250YWluO1wiIC8+YFxyXG5cclxuYW5nbGVTY2FsZTEgPSBkMy5zY2FsZUxpbmVhcigpXHJcbiAgLmRvbWFpbihbMCwgMV0pXHJcbiAgLnJhbmdlKFstMTgwLCAwXSlcclxuICAuY2xhbXAodHJ1ZSlcclxuICAgIFxyXG5hbmdsZTEgPSBhbmdsZVNjYWxlMShjclByb2dyZXNzQmxvY2spXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltYWdlcyA9IFtcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xLnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzIucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vMy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi80LnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzUucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vNi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi83LnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzgucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vOS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xOC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xOS5wbmdcIlxyXG5dXHJcblxyXG4vLyBJZiB0aGlzIHNlY3Rpb24ncyBmaXJzdCB0cmlnZ2VyIGlzIHRoZSAzcmQgdHJpZ2dlciBpbiB0aGUgZG9jdW1lbnQsIHN1YnRyYWN0IDJcclxuLy8gV2UgdXNlIE1hdGgubWF4IHRvIG1ha2Ugc3VyZSB3ZSBkb24ndCBlbmQgdXAgd2l0aCBhIG5lZ2F0aXZlIGluZGV4XHJcbnJlbGF0aXZlSW5kZXggPSBjclRyaWdnZXJJbmRleCAhPT0gbnVsbCA/IE1hdGgubWF4KDAsIGNyVHJpZ2dlckluZGV4IC0gMjQpIDogMFxyXG5cclxuLy8gQ2FwIGl0IHNvIGl0IGRvZXNuJ3QgdHJ5IHRvIGxvYWQgYW4gaW1hZ2UgYmV5b25kIGluZGV4IDE1XHJcbmN1cnJlbnRJbmRleCA9IE1hdGgubWluKHJlbGF0aXZlSW5kZXgsIGltYWdlcy5sZW5ndGggLSAxKVxyXG5cclxuaHRtbGA8aW1nIHNyYz1cIiR7aW1hZ2VzW2N1cnJlbnRJbmRleF19XCIgc3R5bGU9XCJ3aWR0aDogMTAwJTsgaGVpZ2h0OiBhdXRvOyBtYXgtaGVpZ2h0OiA4MHZoOyBvYmplY3QtZml0OiBjb250YWluO1wiIC8+YFxyXG5cclxuYW5nbGVTY2FsZTEgPSBkMy5zY2FsZUxpbmVhcigpXHJcbiAgLmRvbWFpbihbMCwgMV0pXHJcbiAgLnJhbmdlKFstMTgwLCAwXSlcclxuICAuY2xhbXAodHJ1ZSlcclxuICAgIFxyXG5hbmdsZTEgPSBhbmdsZVNjYWxlMShjclByb2dyZXNzQmxvY2spXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltYWdlcyA9IFtcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xLnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzIucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vMy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi80LnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzUucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vNi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi83LnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzgucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vOS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xOC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xOS5wbmdcIlxyXG5dXHJcblxyXG4vLyBJZiB0aGlzIHNlY3Rpb24ncyBmaXJzdCB0cmlnZ2VyIGlzIHRoZSAzcmQgdHJpZ2dlciBpbiB0aGUgZG9jdW1lbnQsIHN1YnRyYWN0IDJcclxuLy8gV2UgdXNlIE1hdGgubWF4IHRvIG1ha2Ugc3VyZSB3ZSBkb24ndCBlbmQgdXAgd2l0aCBhIG5lZ2F0aXZlIGluZGV4XHJcbnJlbGF0aXZlSW5kZXggPSBjclRyaWdnZXJJbmRleCAhPT0gbnVsbCA/IE1hdGgubWF4KDAsIGNyVHJpZ2dlckluZGV4IC0gMjQpIDogMFxyXG5cclxuLy8gQ2FwIGl0IHNvIGl0IGRvZXNuJ3QgdHJ5IHRvIGxvYWQgYW4gaW1hZ2UgYmV5b25kIGluZGV4IDE1XHJcbmN1cnJlbnRJbmRleCA9IE1hdGgubWluKHJlbGF0aXZlSW5kZXgsIGltYWdlcy5sZW5ndGggLSAxKVxyXG5cclxuaHRtbGA8aW1nIHNyYz1cIiR7aW1hZ2VzW2N1cnJlbnRJbmRleF19XCIgc3R5bGU9XCJ3aWR0aDogMTAwJTsgaGVpZ2h0OiBhdXRvOyBtYXgtaGVpZ2h0OiA4MHZoOyBvYmplY3QtZml0OiBjb250YWluO1wiIC8+YFxyXG5cclxuYW5nbGVTY2FsZTEgPSBkMy5zY2FsZUxpbmVhcigpXHJcbiAgLmRvbWFpbihbMCwgMV0pXHJcbiAgLnJhbmdlKFstMTgwLCAwXSlcclxuICAuY2xhbXAodHJ1ZSlcclxuICAgIFxyXG5hbmdsZTEgPSBhbmdsZVNjYWxlMShjclByb2dyZXNzQmxvY2spXHJcbiJ9XX0=
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltYWdlcyA9IFtcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDBfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDFfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDJfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDNfZGVsYXktMC4xcy5qcGdcIixcclxuICBcImFzc2V0cy9jbG91ZHMvZnJhbWVfMDRfZGVsYXktMC4xcy5qcGdcIiwgXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA1X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA2X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA3X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA4X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzA5X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzEwX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzExX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzEyX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzEzX2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzE0X2RlbGF5LTAuMXMuanBnXCIsXHJcbiAgXCJhc3NldHMvY2xvdWRzL2ZyYW1lXzE1X2RlbGF5LTAuMXMuanBnXCJcclxuXVxyXG5cclxuLy8gSWYgdGhpcyBzZWN0aW9uJ3MgZmlyc3QgdHJpZ2dlciBpcyB0aGUgM3JkIHRyaWdnZXIgaW4gdGhlIGRvY3VtZW50LCBzdWJ0cmFjdCAyXHJcbi8vIFdlIHVzZSBNYXRoLm1heCB0byBtYWtlIHN1cmUgd2UgZG9uJ3QgZW5kIHVwIHdpdGggYSBuZWdhdGl2ZSBpbmRleFxyXG5yZWxhdGl2ZUluZGV4ID0gY3JUcmlnZ2VySW5kZXggIT09IG51bGwgPyBNYXRoLm1heCgwLCBjclRyaWdnZXJJbmRleCAtIDUpIDogMFxyXG5cclxuLy8gQ2FwIGl0IHNvIGl0IGRvZXNuJ3QgdHJ5IHRvIGxvYWQgYW4gaW1hZ2UgYmV5b25kIGluZGV4IDE1XHJcbmN1cnJlbnRJbmRleCA9IE1hdGgubWluKHJlbGF0aXZlSW5kZXgsIGltYWdlcy5sZW5ndGggLSAxKVxyXG5cclxuaHRtbGA8aW1nIHNyYz1cIiR7aW1hZ2VzW2N1cnJlbnRJbmRleF19XCIgc3R5bGU9XCJ3aWR0aDogMTAwJTsgaGVpZ2h0OiBhdXRvOyBtYXgtaGVpZ2h0OiA4MHZoOyBvYmplY3QtZml0OiBjb250YWluO1wiIC8+YFxyXG5cclxuYW5nbGVTY2FsZTEgPSBkMy5zY2FsZUxpbmVhcigpXHJcbiAgLmRvbWFpbihbMCwgMV0pXHJcbiAgLnJhbmdlKFstMTgwLCAwXSlcclxuICAuY2xhbXAodHJ1ZSlcclxuICAgIFxyXG5hbmdsZTEgPSBhbmdsZVNjYWxlMShjclByb2dyZXNzQmxvY2spXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltYWdlcyA9IFtcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xLnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzIucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vMy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi80LnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzUucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vNi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi83LnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzgucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vOS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xOC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xOS5wbmdcIlxyXG5dXHJcblxyXG4vLyBJZiB0aGlzIHNlY3Rpb24ncyBmaXJzdCB0cmlnZ2VyIGlzIHRoZSAzcmQgdHJpZ2dlciBpbiB0aGUgZG9jdW1lbnQsIHN1YnRyYWN0IDJcclxuLy8gV2UgdXNlIE1hdGgubWF4IHRvIG1ha2Ugc3VyZSB3ZSBkb24ndCBlbmQgdXAgd2l0aCBhIG5lZ2F0aXZlIGluZGV4XHJcbnJlbGF0aXZlSW5kZXggPSBjclRyaWdnZXJJbmRleCAhPT0gbnVsbCA/IE1hdGgubWF4KDAsIGNyVHJpZ2dlckluZGV4IC0gMjQpIDogMFxyXG5cclxuLy8gQ2FwIGl0IHNvIGl0IGRvZXNuJ3QgdHJ5IHRvIGxvYWQgYW4gaW1hZ2UgYmV5b25kIGluZGV4IDE1XHJcbmN1cnJlbnRJbmRleCA9IE1hdGgubWluKHJlbGF0aXZlSW5kZXgsIGltYWdlcy5sZW5ndGggLSAxKVxyXG5cclxuaHRtbGA8aW1nIHNyYz1cIiR7aW1hZ2VzW2N1cnJlbnRJbmRleF19XCIgc3R5bGU9XCJ3aWR0aDogMTAwJTsgaGVpZ2h0OiBhdXRvOyBtYXgtaGVpZ2h0OiA4MHZoOyBvYmplY3QtZml0OiBjb250YWluO1wiIC8+YFxyXG5cclxuYW5nbGVTY2FsZTEgPSBkMy5zY2FsZUxpbmVhcigpXHJcbiAgLmRvbWFpbihbMCwgMV0pXHJcbiAgLnJhbmdlKFstMTgwLCAwXSlcclxuICAuY2xhbXAodHJ1ZSlcclxuICAgIFxyXG5hbmdsZTEgPSBhbmdsZVNjYWxlMShjclByb2dyZXNzQmxvY2spXHJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltYWdlcyA9IFtcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xLnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzIucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vMy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi80LnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzUucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vNi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi83LnBuZ1wiLFxyXG4gIFwiYXNzZXRzL2ZpbXNfYW5pbWF0aW9uLzgucG5nXCIsXHJcbiAgXCJhc3NldHMvZmltc19hbmltYXRpb24vOS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xMy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNS5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNi5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xNy5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xOC5wbmdcIixcclxuICBcImFzc2V0cy9maW1zX2FuaW1hdGlvbi8xOS5wbmdcIlxyXG5dXHJcblxyXG4vLyBJZiB0aGlzIHNlY3Rpb24ncyBmaXJzdCB0cmlnZ2VyIGlzIHRoZSAzcmQgdHJpZ2dlciBpbiB0aGUgZG9jdW1lbnQsIHN1YnRyYWN0IDJcclxuLy8gV2UgdXNlIE1hdGgubWF4IHRvIG1ha2Ugc3VyZSB3ZSBkb24ndCBlbmQgdXAgd2l0aCBhIG5lZ2F0aXZlIGluZGV4XHJcbnJlbGF0aXZlSW5kZXggPSBjclRyaWdnZXJJbmRleCAhPT0gbnVsbCA/IE1hdGgubWF4KDAsIGNyVHJpZ2dlckluZGV4IC0gMjQpIDogMFxyXG5cclxuLy8gQ2FwIGl0IHNvIGl0IGRvZXNuJ3QgdHJ5IHRvIGxvYWQgYW4gaW1hZ2UgYmV5b25kIGluZGV4IDE1XHJcbmN1cnJlbnRJbmRleCA9IE1hdGgubWluKHJlbGF0aXZlSW5kZXgsIGltYWdlcy5sZW5ndGggLSAxKVxyXG5cclxuaHRtbGA8aW1nIHNyYz1cIiR7aW1hZ2VzW2N1cnJlbnRJbmRleF19XCIgc3R5bGU9XCJ3aWR0aDogMTAwJTsgaGVpZ2h0OiBhdXRvOyBtYXgtaGVpZ2h0OiA4MHZoOyBvYmplY3QtZml0OiBjb250YWluO1wiIC8+YFxyXG4ifV19
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
