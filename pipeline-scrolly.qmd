@@ -7,6 +7,9 @@ format:
       section-background-color: black
       narrative-text-color-sidebar: "#e2e2e2"
 output-file: index
+project:
+  type: default
+  output-dir: docs
 ---
 :::{.cr-section layout="overlay-center"}
 
@@ -292,7 +295,7 @@ plot_spawning_biomass(petrale)
 ```
 :::
 
-:::{#cr-sequence-workflows}
+::: {#cr-sequence-workflows}
 ```{ojs}
 //| echo: false
 images = [
@@ -332,11 +335,11 @@ html`<img src="${images[currentIndex]}" style="width: 100%; height: auto; max-he
 
 <!--- end projects block --->
 
-:::{.cr-section layout="overlay-center"}
+::: {.cr-section layout="overlay-center"}
 
 The Stock Assessment Pipeline [@cr-underwater]
 
-:::{#cr-underwater}
+::: {#cr-underwater}
 ![](assets/underwater.png)
 :::
 
@@ -344,7 +347,7 @@ The Stock Assessment Pipeline [@cr-underwater]
 
 <!--- end pipeline title transition block --->
 
-:::{.cr-section layout="sidebar-right"}
+::: {.cr-section layout="sidebar-right"}
 
 Let's Dive In<br>[@cr-diver]
 Each piece of the pipeline connects to form partially and fully automated components. Each of these "modules" could be incorporated into the workflow of an assessment scientist at NOAA.[@cr-diver]
@@ -361,7 +364,7 @@ Intention[@cr-diver]
 
 **Long term goal: an established pipeline that can provide annual updates for a given stock triggered by new data.**<br>NOTE: This is in early stage development and processes are not completely developed. We are currently working to make connections among projects and current efforts along with identifying points of contact for each portion of the pipeline. We plan to make use of existing and new efforts to develop a working example to demonstrate the potential for an established automated stock assessment workflow.[@cr-diver]
 
-:::{#cr-diver}
+::: {#cr-diver}
 ![](assets/diver.png)
 :::
 
@@ -369,35 +372,35 @@ Intention[@cr-diver]
 
 <!--- end dive in block --->
 
-:::{.cr-section layout="overlay-right"}
+::: {.cr-section layout="overlay-right"}
 
 Storage in the cloud, QA/QC, 99% ready. [@cr-data]
 
-:::{#cr-data} 
+::: {#cr-data} 
 ![](assets/general pipeline/data.jpg)
 :::
 
 Variety of approaches to cloud: Google Drive, Data Buckets, Oracle. [@cr-data-storage]
 
-:::{#cr-data-storage} 
+::: {#cr-data-storage} 
 ![](assets/general pipeline/Data storage .jpg)
 :::
 
 Goal is to have all assessment models available on virtual machines. [@cr-modelling]
 
-:::{#cr-modelling} 
+::: {#cr-modelling} 
 ![](assets/general pipeline/Modelling.jpg)
 :::
 
 Cloud storage of all model output to archive and pull for monitoring and reference in future cycles. [@cr-model-output]
 
-:::{#cr-model-output} 
+::: {#cr-model-output} 
 ![](assets/general pipeline/Model output.jpg)
 :::
 
 Presenting data on platforms such as Stock Smart, GitHub, and reports. [@cr-output]
 
-:::{#cr-output} 
+::: {#cr-output} 
 ![](assets/general pipeline/Output.jpg)
 :::
 
@@ -405,7 +408,7 @@ Presenting data on platforms such as Stock Smart, GitHub, and reports. [@cr-outp
 
 <!--- end summ pipeline block --->
 
-:::{.cr-section .centered-story layout="overlay-right"}
+::: {.cr-section .centered-story layout="overlay-right"}
 
 Pipeline Modules [@cr-larg-pipe]
 
@@ -434,14 +437,14 @@ Pipeline Modules [@cr-larg-pipe]
 
 **New data = repeat workflow** [@cr-larg-pipe]
 
-:::{#cr-larg-pipe}
+::: {#cr-larg-pipe}
 ![](assets/Pipeline.jpg)
 :::
 
 :::
 
-:::{.cr-section layout="overlay-center"}
-:::{.text-center}
+::: {.cr-section layout="overlay-center"}
+::: {focus.on}
 # Do you think assessments could be automated in your region?
 :::
 :::
