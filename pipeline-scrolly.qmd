@@ -4,7 +4,6 @@ format:
     cr-style:
       narrative-background-color-overlay: black
       narrative-text-color-overlay: "#e2e2e2"
-      narrative-outer-margin: 1:1
       section-background-color: black
       narrative-text-color-sidebar: "#e2e2e2"
 ---
@@ -405,7 +404,7 @@ Presenting data on platforms such as Stock Smart, GitHub, and reports. [@cr-outp
 
 <!--- end summ pipeline block --->
 
-:::{.cr-section layout="overlay-right"}
+:::{.cr-section .centered-story layout="overlay-right"}
 
 Pipeline Modules [@cr-larg-pipe]
 
@@ -438,4 +437,10 @@ Pipeline Modules [@cr-larg-pipe]
 ![](assets/Pipeline.jpg)
 :::
 
+:::
+
+:::{.cr-section layout="overlay-center"}
+:::{.text-center}
+# Do you think assessments could be automated in your region?
+:::
 :::
