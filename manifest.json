@@ -198,16 +198,31 @@
     "assets/general pipeline/Data storage .jpg": {
       "checksum": "651e66fde09876f2c881421d7eb2dd35"
     },
+    "assets/general pipeline/Data storage.png": {
+      "checksum": "651e66fde09876f2c881421d7eb2dd35"
+    },
     "assets/general pipeline/Data.jpg": {
+      "checksum": "cc93c3b19379e5df49d6a84095fd5431"
+    },
+    "assets/general pipeline/Data.png": {
       "checksum": "cc93c3b19379e5df49d6a84095fd5431"
     },
     "assets/general pipeline/Model output.jpg": {
       "checksum": "aed4cc7de366c1c854b7e524aa462fb1"
     },
+    "assets/general pipeline/Model output.png": {
+      "checksum": "aed4cc7de366c1c854b7e524aa462fb1"
+    },
     "assets/general pipeline/Modelling.jpg": {
       "checksum": "7dd9a6371516597a8ac22cd517cf0014"
     },
+    "assets/general pipeline/Modelling.png": {
+      "checksum": "7dd9a6371516597a8ac22cd517cf0014"
+    },
     "assets/general pipeline/Output.jpg": {
+      "checksum": "8264a698496d1b8ba371ad74138cf3f7"
+    },
+    "assets/general pipeline/Output.png": {
       "checksum": "8264a698496d1b8ba371ad74138cf3f7"
     },
     "assets/gh_template.jpg": {
@@ -427,7 +442,7 @@
       "checksum": "ae359a96369d3773cf31bf9f5b220bc5"
     },
     "index.html": {
-      "checksum": "c12e70b5a7e2103cdb7977abe72b2951"
+      "checksum": "5c0de52e05baee84dc97622dfe28a4e2"
     },
     "LICENSE": {
       "checksum": "78e6f56135b1862d62f002d190ea0c76"
@@ -436,7 +451,7 @@
       "checksum": "08284bd3a6142e90663e559272beed08"
     },
     "pipeline-scrolly.qmd": {
-      "checksum": "61bd5ddb24beda00975e9854c1bcc84a"
+      "checksum": "30d47238d1bee7ee85d60737c48c7f49"
     },
     "pipeline-scrolly_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css": {
       "checksum": "efbb37e9afcc02144ebbc7afd12a776f"

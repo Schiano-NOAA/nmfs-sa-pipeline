@@ -92,10 +92,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
-          --cr-narrative-text-color-overlay: #e2e2e2;
---cr-section-background-color: black;
---cr-narrative-background-color-overlay: black;
+          --cr-narrative-background-color-overlay: black;
 --cr-narrative-text-color-sidebar: #e2e2e2;
+--cr-section-background-color: black;
+--cr-narrative-text-color-overlay: #e2e2e2;
         }
       </style>
     
@@ -607,19 +607,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sticky-col">
 <div class="sticky-col-stack">
 <div id="cr-data" class="sticky">
-<p><img src="assets/general%20pipeline/data.jpg" class="img-fluid"></p>
+<p><img src="assets/general%20pipeline/data.png" class="img-fluid"></p>
 </div>
 <div id="cr-data-storage" class="sticky">
-<p><img src="assets/general%20pipeline/Data%20storage%20.jpg" class="img-fluid"></p>
+<p><img src="assets/general%20pipeline/Data%20storage.png" class="img-fluid"></p>
 </div>
 <div id="cr-modelling" class="sticky">
-<p><img src="assets/general%20pipeline/Modelling.jpg" class="img-fluid"></p>
+<p><img src="assets/general%20pipeline/Modelling.png" class="img-fluid"></p>
 </div>
 <div id="cr-model-output" class="sticky">
-<p><img src="assets/general%20pipeline/Model%20output.jpg" class="img-fluid"></p>
+<p><img src="assets/general%20pipeline/Model%20output.png" class="img-fluid"></p>
 </div>
 <div id="cr-output" class="sticky">
-<p><img src="assets/general%20pipeline/Output.jpg" class="img-fluid"></p>
+<p><img src="assets/general%20pipeline/Output.png" class="img-fluid"></p>
 </div>
 </div>
 </div>
@@ -632,47 +632,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Pipeline Modules</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-larg-pipe" data-scale-by="3" data-pan-to="98%,70%">
+<div class="trigger new-trigger" data-pan-to="98%,70%" data-focus-on="cr-larg-pipe" data-scale-by="3">
 <div class="narrative">
 <p><strong>Survey Tracking</strong><br><br>Linkages to surveys in assessments.<br><br>By establishing a process that pulls data from specific surveys, we will be able to directly identify then measure the surveys used in assessments and help calculate their impact.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-larg-pipe" data-scale-by="3" data-pan-to="68%,70%">
+<div class="trigger new-trigger" data-pan-to="68%,70%" data-focus-on="cr-larg-pipe" data-scale-by="3">
 <div class="narrative">
 <p><strong>QA/QC &amp; 99% Use-Case Data</strong><br><br>Data is available and ready for analysis.<br><br>The 99% use-case standard product is the operational, “downstream-ready” standard for all survey data, ensuring 99% of assessment users can utilize it without bespoke cleaning. This data is fully accessible in the cloud.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-larg-pipe" data-scale-by="3" data-pan-to="39%,70%">
+<div class="trigger new-trigger" data-pan-to="39%,70%" data-focus-on="cr-larg-pipe" data-scale-by="3">
 <div class="narrative">
 <p><strong>Data Processing</strong><br><br>R packages to extract and clean.<br><br>Fundamental improvements to data quality and preparation have been in the works. The mandate to move data to the cloud by the end of 2026 makes data readily available to create linkages for data extraction and preparation packages.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-larg-pipe" data-scale-by="3" data-pan-to="-5%,70%">
+<div class="trigger new-trigger" data-pan-to="-5%,70%" data-focus-on="cr-larg-pipe" data-scale-by="3">
 <div class="narrative">
 <p><strong>Data Preparation</strong><br><br>Getting data input ready.<br><br>Making use of the many currently available packages along with transforming current code into R package structures and functions will allow scientists to create reproducible workflows leading to automation.<br>By having a centralized location and approach, we can link indices of abundance to other down-stream products like DisMAP.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-larg-pipe" data-scale-by="3" data-pan-to="-33%,70%">
+<div class="trigger new-trigger" data-pan-to="-33%,70%" data-focus-on="cr-larg-pipe" data-scale-by="3">
 <div class="narrative">
 <p><strong>Virtual Machines</strong><br><br>Accessible online containing pre-configured assessment models.<br><br>Once established, the scientist can execute the assessment model, bridging code, and sensitivity runs on the machine.<br><br> <img src="assets/computa.jpg" class="img-fluid"> <br>Bash scripts and R scripts for other processes during execution of the model are stored in GitHub.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-larg-pipe" data-scale-by="3" data-pan-to="-33%,70%">
+<div class="trigger new-trigger" data-pan-to="-33%,70%" data-focus-on="cr-larg-pipe" data-scale-by="3">
 <div class="narrative">
 <p><strong>GitHub</strong><br><br>Stores scripts and other files to execute the pipeline.<br><br>Most of the processes that create the automated pipeline are stored in the GitHub repository specific to a stock.<br><br> <img src="assets/gh_template.jpg" class="img-fluid"> <br>We can use “tagging” in a repository to identify the year of the assessment without exponentially increasing the number of files in the repository.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-larg-pipe" data-scale-by="3" data-pan-to="-63%,70%">
+<div class="trigger new-trigger" data-pan-to="-63%,70%" data-focus-on="cr-larg-pipe" data-scale-by="3">
 <div class="narrative">
 <p><strong>Model Results Storage</strong><br><br>Centralized storage of all assessment model results.<br><br>Model results will be stored in a short-term Google Data Bucket with a transition to long-term storage such as Oracle.<br><br> <img src="assets/oracle.png" class="img-fluid" style="display: block; margin: 0 auto;;width:30.0%"></p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-larg-pipe" data-scale-by="3" data-pan-to="-85%,70%">
+<div class="trigger new-trigger" data-pan-to="-85%,70%" data-focus-on="cr-larg-pipe" data-scale-by="3">
 <div class="narrative">
 <p><strong>Stock Smart/SIS</strong><br><br>Creating Direct connections from shared bucket to SIS.<br><br>Using an R function, analysts can send model results directly to SIS which can be later uploaded to stock smart. Potential model comparison and interactive platform for management during review could be developed in the future.</p>
 </div>
 </div>
-<div class="trigger new-trigger" data-focus-on="cr-larg-pipe" data-scale-by="3" data-pan-to="-85%,70%">
+<div class="trigger new-trigger" data-pan-to="-85%,70%" data-focus-on="cr-larg-pipe" data-scale-by="3">
 <div class="narrative">
 <p><strong>Reporting</strong><br><br>{asar}, {stockplotr}, &amp; GitHub.<br><br>Partially automated reports are stored on a standard GitHub repository indicating the region and stock. Historical assessments can be viewed over time by using the tagging features in GitHub.</p>
 </div>
@@ -696,7 +696,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="trigger">
 <section id="do-you-think-assessments-could-be-automated-in-your-region" class="level1 {focus.on} narrative">
 <h1>Do you think assessments could be automated in your region?</h1>
-<p>Yes or no</p>
 </section>
 </div>
 </div>

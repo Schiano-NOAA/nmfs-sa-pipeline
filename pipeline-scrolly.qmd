@@ -377,31 +377,31 @@ Intention[@cr-diver]
 Storage in the cloud, QA/QC, 99% ready. [@cr-data]
 
 ::: {#cr-data} 
-![](assets/general pipeline/data.jpg)
+![](assets/general pipeline/data.png)
 :::
 
 Variety of approaches to cloud: Google Drive, Data Buckets, Oracle. [@cr-data-storage]
 
 ::: {#cr-data-storage} 
-![](assets/general pipeline/Data storage .jpg)
+![](assets/general pipeline/Data storage.png)
 :::
 
 Goal is to have all assessment models available on virtual machines. [@cr-modelling]
 
 ::: {#cr-modelling} 
-![](assets/general pipeline/Modelling.jpg)
+![](assets/general pipeline/Modelling.png)
 :::
 
 Cloud storage of all model output to archive and pull for monitoring and reference in future cycles. [@cr-model-output]
 
 ::: {#cr-model-output} 
-![](assets/general pipeline/Model output.jpg)
+![](assets/general pipeline/Model output.png)
 :::
 
 Presenting data on platforms such as Stock Smart, GitHub, and reports. [@cr-output]
 
 ::: {#cr-output} 
-![](assets/general pipeline/Output.jpg)
+![](assets/general pipeline/Output.png)
 :::
 
 :::

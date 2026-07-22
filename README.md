@@ -37,6 +37,6 @@ Options for layout of content:
 *All layouts will automatically revert to overlay-center when viewed on a mobile device
 
 - `remove-header-space: true` in the yaml under format removes the headerspace. *Only* use this when doing a 100% CloseRead document
-- 
+- use `rsconnect::writeManifest()` to update the manifest.json after rendering to update the posit connect host
 
 
